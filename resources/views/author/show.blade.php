@@ -18,28 +18,33 @@
   <main style="padding-top:180px; background:#2fa941">
     <div class="card">
         <div class="card-body">
-            <h4>Book Details: {{$book->title}}</h4>
+            <h4>Author Details: {{$author->name}}</h4>
             {{-- <h4 class="card-title">{{$book->title}}</h4>
             <p class="card-text">{{$book->description}}</p> --}}
             <div class="row">
                 <div>
-                    <p>{{$book->description}}</p>
+                    <div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="birthday" value="Birthday: {{$author->birthday}}">
+                        </div>
+                    </div>
+                <div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" value="Email: {{$author->email}}">
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="phone" value="Phone: {{$author->phone}}">
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="biography" value="Biography: {{$author->biography}}">
+                    </div>
+                </div>
+                {{-- <p>{{$author->biography}}</p> --}}
 
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="title" value="Title: {{$book->title}}">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="description" value="Author: {{$book->author->name}}">
-                    </div>
-                </div>
-                {{-- <div class="col-md-3">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="price" value="Price: {{$book->price}} (VNĐ)">
-                    </div>
-                </div> --}}
                 </div>
            </div>
         </div>

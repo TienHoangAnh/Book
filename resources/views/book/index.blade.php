@@ -1,4 +1,4 @@
-@extends('book.layout')
+@extends('layout.layout')
 @section('title', 'Book List')
 @section('content')
 
@@ -20,10 +20,13 @@ align-middle">
         @foreach ($books as $book)
         <tr class="table-primary" >
         <td>
-<br>
             {{$book->title}}
         </td>
-        <td>{{$book->author}}</td>
+        <td>
+            <a href="{{url("/books/".$book->id)}}" class="btn btn-danger">{{$book->author->name}}</a>
+
+            {{-- <a href="">{{$book->author->name}}</a> --}}
+        </td>
         <td>
             <a href="{{url("/books/".$book->id)}}" class="btn btn-danger">View</a>
             <a href="{{url("/books/".$book->id."/edit")}}" class="btn btn-warning">Edit</a>
